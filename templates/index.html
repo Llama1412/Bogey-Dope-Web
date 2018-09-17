@@ -1,0 +1,41 @@
+<html>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+                
+        td, th {
+             border: 1px solid #dddddd;
+            text-align: left;
+             padding: 8px;
+        }
+                
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <head>
+        <meta http-equiv="Refresh" content="10">
+    </head>
+    <h1>GAW Bogey Dope</h1>
+    <h2>Current player count: {{pcount}}</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Aircraft</th>
+        </tr>
+        {% for player in sorted_people %}
+            <tr>
+                <td>{{player.Name}}</td>
+                <td>{{player.Plane}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    
+
+
+
+</html>

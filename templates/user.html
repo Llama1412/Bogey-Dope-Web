@@ -1,0 +1,13 @@
+<html>
+    <title>Test</title>
+    <head>
+        <meta http-equiv="Refresh" content="10">
+    </head>
+    <h1>{{name}}</h1>
+    <h2>Total targets: {{count}}</h2>
+    <ul>
+        {% for bogey in sorted_bogeys %}
+            <li>{{bogey.Type}} <br> {{bogey.Range}} <br> {{bogey.Bearing}} <br><br> </li>
+        {% endfor %}
+    </ul>
+</html>
