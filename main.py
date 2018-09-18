@@ -49,9 +49,9 @@ def index():
 	return(render_template("index.html", pcount=pcount, sorted_people=sorted_people))
     
 
-@app.route('/<target>')
+@app.route('/user/<target>')
 def show_user_profile(target):
-	with urllib.request.urlopen("http://dcs.hoggitworld.com/") as url:
+	with urllib.request.urlopen("http://state.hoggitworld.com/") as url:
 		data = json.loads(url.read().decode())
 		for i in range(len(data["objects"])):
 			if data["objects"][i]["Flags"]["Human"] == True:
