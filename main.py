@@ -47,7 +47,7 @@ def index():
 		sorted_people = sorted(people, key=lambda x: x.Name)
 
 	return(render_template("index.html", pcount=pcount, sorted_people=sorted_people))
-    
+
 
 @app.route('/user/<target>')
 def show_user_profile(target):
@@ -108,8 +108,8 @@ def show_user_profile(target):
 					sorted_bogeys = sorted(unsorted_bogeys, key=lambda x: x.Range)
 					count = count + 1
 	return(render_template("user.html", name=target, sorted_bogeys=sorted_bogeys, count=count))
-    
-    
+
+
 
 if __name__ == "__main__":
 	app.run()
